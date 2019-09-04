@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="800.0" spacing="10" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controller.AdminController">
+ <HBox alignment="center_left">
+  <ImageView fitHeight="100.0" fitWidth="100.0">
+	<Image url="@movie_icon.png" />
+	</ImageView>
+    <Label styleClass="h1" stylesheets="@kiosk.css" text="Administration Menu" />
+    </HBox>
+     <HBox styleClass="h2" stylesheets="@kiosk.css">
+    <Label alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" styleClass="h2" stylesheets="@kiosk.css" text="                          Manage Customers: Manage Movies: " textAlignment="CENTER" />
+    </HBox>
+    <HBox alignment="center" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="ViewCusBtn" onAction="#ViewCusBot" styleClass="menuButton" stylesheets="@kiosk.css" text="View All" />
+		<Button fx:id="ViewMovBtn" onAction="#ViewMovBot" styleClass="menuButton" stylesheets="@kiosk.css" text="View all" />
+	</HBox>
+   <HBox alignment="center" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="AddCusBtn" onAction="#AddCusBot" styleClass="menuButton" stylesheets="@kiosk.css" text="Add" />
+		<Button fx:id="AddMovBtn" onAction="#AddMovBot" styleClass="menuButton" stylesheets="@kiosk.css" text="Add" />
+	</HBox>
+	<HBox alignment="center" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="RmCusBtn" onAction="#RmCusBot" styleClass="menuButton" stylesheets="@kiosk.css" text="Remove" />
+		<Button fx:id="RmMovBtn" onAction="#RmMovBot" styleClass="menuButton" stylesheets="@kiosk.css" text="Remove" />
+	</HBox>
+	
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="ExitBtn" onAction="#ExitBot" stylesheets="@kiosk.css" text="Exit" />
+	</HBox>
+   
+
+    <stylesheets>
+        <URL value="@kiosk.css" />
+    </stylesheets>
+
+</VBox>

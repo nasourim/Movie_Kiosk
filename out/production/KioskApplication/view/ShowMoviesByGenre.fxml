@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ShowMoviesByGenreController"
+      alignment="center" spacing="10"
+      styleClass="root"
+      prefWidth="700.0"
+>
+  
+	<HBox alignment="center_left">
+		<ImageView>
+			<Image url="@movie_icon.png" />
+		</ImageView>
+		<Label text="Show Movie By Genre" styleClass="h1" />
+	</HBox>
+	<HBox alignment="center_left">
+	
+	<Label text="Genres:                "  styleClass="h2" />
+	<Label text="Movies: "    styleClass="h2"/>
+	</HBox>
+	<HBox spacing="10"  prefWidth="700.0">
+	<ListView fx:id="MovieLv" prefWidth="200.0"/>
+	<TableView fx:id="MovieTv"  prefWidth="500.0">
+	<columns>
+		<TableColumn text="Title">
+			<cellValueFactory>
+				<PropertyValueFactory property="title" />
+			</cellValueFactory>
+		</TableColumn>
+		<TableColumn text="Year">
+			<cellValueFactory>
+				<PropertyValueFactory property="year" />
+			</cellValueFactory>
+		</TableColumn>
+		<TableColumn text="Genre">
+			<cellValueFactory>
+				<PropertyValueFactory property="genre" />
+			</cellValueFactory>
+		</TableColumn>
+		<TableColumn text="Price">
+			<cellValueFactory>
+				<PropertyValueFactory property="price" />
+			</cellValueFactory>
+		</TableColumn>
+	</columns>
+
+</TableView>
+</HBox>
+	<HBox    GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="DisPlayBtn" text="Display Movies" onAction="#handleGenre"/>
+	</HBox>
+
+	<HBox   alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="ExitBtn" text="Quit" onAction="#ExitBot"/>
+	</HBox>
+   
+
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+
+</VBox>

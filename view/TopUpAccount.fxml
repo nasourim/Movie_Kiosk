@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.TopUpAccountController"
+      alignment="center" spacing="10"
+      styleClass="root"
+      prefWidth="800.0"
+>
+
+  	<HBox alignment="center_left">
+		<ImageView>
+			<Image url="@movie_icon.png" />
+		</ImageView>
+		<Label text="Top-up Account" styleClass="h1" />
+	</HBox>
+	<HBox alignment="center"  spacing="10">
+ 	<Label text="ID:                    " GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+	<TextField fx:id="SelectCusTf"  GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+	</HBox>
+	<HBox alignment="center"  spacing="10">
+	<Label text="Top-up Amount: " GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+	<TextField fx:id="AmountTf"  GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+	</HBox>
+			<HBox  alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+	<Label fx:id="label1"/>
+	</HBox>
+		<HBox  alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="TopupBtn" text="Top-up Account" onAction="#GetTOPup"/>
+	</HBox>
+	<HBox   alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="ExitBtn" text="Quit" onAction="#ExitBot"/>
+	</HBox>
+   
+
+    <stylesheets>
+        <URL value="@kiosk.css"/>
+    </stylesheets>
+
+</VBox>

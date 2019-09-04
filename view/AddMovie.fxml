@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="center" prefWidth="800.0" spacing="10" styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddMovieController">
+	<HBox alignment="center_left">
+      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movie_icon.png" />
+         </image>
+      </ImageView>
+   		<Label styleClass="h1" text="Add Movie">
+         <font>
+            <Font name="Verdana" size="32.0" />
+         </font></Label>
+	</HBox>
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Label text="Title:   " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+		<TextField fx:id="TitleTf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+	</HBox>
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Label text="Year:   " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+		<TextField fx:id="YearTf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+	</HBox>
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Label text="Genre: " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+		<TextField fx:id="GenreTf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+	</HBox>
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Label text="Price:   " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+		<TextField fx:id="PriceTf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+	</HBox>
+		<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+	<Label fx:id="label1" />
+	</HBox>
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="AddMovieBtn" onAction="#AddMovieBot" text="Add Movie" />
+	</HBox>
+
+	<HBox alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+		<Button fx:id="ExitBtn" onAction="#ExitBot" text="Quit" />
+	</HBox>
+
+
+	<stylesheets>
+		<URL value="@kiosk.css" />
+	</stylesheets>
+
+</VBox>

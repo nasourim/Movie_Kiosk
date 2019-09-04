@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.ReturnMovieController" alignment="center"
+	spacing="10" styleClass="root" prefWidth="800.0">
+	<HBox alignment="center_left">
+		<ImageView>
+			<Image url="@movie_icon.png" />
+		</ImageView>
+		<Label text="Rent a Movie" styleClass="h1" />
+	</HBox>
+	<HBox alignment="center" spacing="10">
+	<Label text="Customer ID:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+	<TextField fx:id="SelectCusTf" GridPane.columnIndex="1"
+		GridPane.rowIndex="6" />
+	<Button fx:id="SelectCusBtn" Text="Select Customer"
+		disable="true" onAction="#GetSelectCus" />
+			</HBox>
+			<HBox  alignment="center" styleClass="h2" spacing="10">
+	<Label Text="Rent Movie" />
+	</HBox>
+	<TableView fx:id="AvaMovTv" prefWidth="800" prefHeight="200">
+		<columns>
+			<TableColumn text="Title">
+				<cellValueFactory>
+					<PropertyValueFactory property="title" />
+				</cellValueFactory>
+			</TableColumn>
+			<TableColumn text="Year">
+				<cellValueFactory>
+					<PropertyValueFactory property="year" />
+				</cellValueFactory>
+			</TableColumn>
+			<TableColumn text="Genre">
+				<cellValueFactory>
+					<PropertyValueFactory property="genre" />
+				</cellValueFactory>
+			</TableColumn>
+			<TableColumn text="Price">
+				<cellValueFactory>
+					<PropertyValueFactory property="price" />
+				</cellValueFactory>
+			</TableColumn>
+		</columns>
+
+	</TableView>
+	<Button fx:id="RentMovBtn" Text="Return Select Movie"
+		disable="true" onAction="#GetSelectMov" />
+		<HBox  alignment="center" GridPane.columnIndex="1" GridPane.rowIndex="7">
+	<Label fx:id="label1"/>
+	</HBox>
+	<Button fx:id="ExitBtn" Text="Exit" onAction="#ExitBot" />
+
+	<stylesheets>
+		<URL value="@kiosk.css" />
+	</stylesheets>
+</VBox>

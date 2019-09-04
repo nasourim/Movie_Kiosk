@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="controller.ShowAllCustomersController"
+	alignment="center" spacing="10" styleClass="root" prefWidth="800.0">
+
+	<HBox alignment="center_left">
+		<ImageView>
+			<Image url="@movie_icon.png" />
+		</ImageView>
+		<Label text="All Customer" styleClass="h1" />
+	</HBox>
+	<TableView fx:id="customerTv" >
+	<columns>
+		<TableColumn text="Id">
+			<cellValueFactory>
+				<PropertyValueFactory property="id" />
+			</cellValueFactory>
+		</TableColumn>
+		<TableColumn text="Name">
+			<cellValueFactory>
+				<PropertyValueFactory property="name" />
+			</cellValueFactory>
+		</TableColumn>
+		<TableColumn text="Balance">
+			<cellValueFactory>
+				<PropertyValueFactory property="balance" />
+			</cellValueFactory>
+		</TableColumn>
+	</columns>
+
+</TableView>
+
+	<HBox alignment="center" GridPane.columnIndex="1"
+		GridPane.rowIndex="7">
+		<Button fx:id="ExitBtn" text="Quit" onAction="#ExitBot" />
+	</HBox>
+
+
+	<stylesheets>
+		<URL value="@kiosk.css" />
+	</stylesheets>
+
+</VBox>
